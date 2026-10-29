@@ -1,0 +1,72 @@
+{
+    "template_id": "ecr_shs_v26",
+    "calculation_rules": {
+        "transmutation_table_version": "deped_2026_do015",
+        "passing_grade": 75,
+        "lowest_transmuted_grade": 60
+    },
+    "sheets": {
+        "metadata_sheet": "INPUT DATA",
+        "grading_sheets": [
+            "Term 1",
+            "Term 2",
+            "Term 3"
+        ]
+    },
+    "metadata": {
+        "region": "F10",
+        "division": "F11",
+        "school_id": "F13",
+        "school_name": "F14",
+        "school_year": "F16",
+        "teacher": "F22",
+        "grade_level": "F24",
+        "section_name": "F25",
+        "subject_category": "F28",
+        "cluster": "F29",
+        "subject": "F30",
+        "other_elective": "F39"
+    },
+    "roster": {
+        "male_lrn_start": "N11",
+        "male_name_start": "O11",
+        "female_lrn_start": "R11",
+        "female_name_start": "S11",
+        "max_students_per_gender": 50
+    },
+    "grading_coordinates": {
+        "written_works": {
+            "weight": 0.20,
+            "max_items": 10,
+            "hps_row": 14,
+            "hps_start_col": "D",
+            "hps_end_col": "M",
+            "male_score_start_row": 17,
+            "male_score_end_row": 66,
+            "female_score_start_row": 68,
+            "female_score_end_row": 117
+        },
+        "performance_tasks": {
+            "weight": 0.50,
+            "max_items": 10,
+            "hps_start_col": "Q",
+            "hps_end_col": "Z",
+            "hps_row": 14,
+            "male_score_start_row": 17,
+            "male_score_end_row": 66,
+            "female_score_start_row": 68,
+            "female_score_end_row": 117
+        },
+        "examinations": {
+            "weight": 0.30,
+            "max_items": 3,
+            "hps_start_col": "AD",
+            "hps_end_col": "AF",
+            "hps_row": 14,
+            "male_score_start_row": 17,
+            "male_score_end_row": 66,
+            "female_score_start_row": 68,
+            "female_score_end_row": 117
+        }
+    }
+}
