@@ -61,7 +61,7 @@ def generate_ecr(payload):
     else:
         print("Cluster is NOT an elective. Skipping elective-specific cells.")
 
-    # 3. Separate students dynamically by gender
+    # Separate students dynamically by gender
     students = payload.get("students", [])
     male_students = [s for s in students if s.get("sex", "").upper() == "M"]
     female_students = [s for s in students if s.get("sex", "").upper() == "F"]
@@ -80,7 +80,7 @@ def generate_ecr(payload):
         input_sheet[f'R{row}'].value = student.get("lrn")
         input_sheet[f'S{row}'].value = student.get("name")
 
-    # 4. Populate grades dynamically across term sheets (Term 1, Term 2, Term 3)
+    # Populate grades dynamically across term sheets (Term 1, Term 2, Term 3)
     terms_data = payload.get("terms_data", {})
 
     for term_name, term_info in terms_data.items():
@@ -120,7 +120,7 @@ def generate_ecr(payload):
     # Force Excel recalculation flag
     wb.properties.fullCalcOnLoad = True
 
-    # 5. Save output file with strict validation
+    # Save output file with strict validation
     output_path = payload.get("output_path")
     
     if not output_path:
